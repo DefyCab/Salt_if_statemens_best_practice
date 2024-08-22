@@ -14,7 +14,7 @@ describe("age calculator", () => {
 describe("age calculator Love", () => {
     it("someone born 1979 is 45 in 2024", () => {
       //act
-      const result = app.getAge(1979, 2024)
+      const result = app.getAgeArrow(1979, 2024)
   
       // assert
       assert.equal(result, 45)

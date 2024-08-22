@@ -2,6 +2,9 @@ function getAge(birthYear, currentYear) {
   return currentYear - birthYear
 }
 
-const age = getAge(1972, 2022)
+const getAgeArrow = (birthYear, currentYear) => {
+  return currentYear - birthYear
+}
 
 module.exports.getAge = getAge
+module.exports.getAgeArrow = getAgeArrow

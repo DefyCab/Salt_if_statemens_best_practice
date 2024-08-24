@@ -1,5 +1,6 @@
 import assert from "assert"
 import { getAge, getAgeArrow } from "./index.mjs"
+import { describe, it } from "mocha"
 
 describe("age calculator", () => {
   it("someone born 1972 is 50 in 2022", () => {
@@ -12,12 +13,23 @@ describe("age calculator", () => {
 })
 
 describe("age calculator Love", () => {
-    it("someone born 1979 is 45 in 2024", () => {
-      //act
-      const result = getAgeArrow(1979, 2024)
-  
-      // assert
-      assert.equal(result, 45)
-    })
+  it("someone born 1979 is 45 in 2024", () => {
+    //act
+    const result = getAgeArrow(1979, 2024)
+
+    // assert
+    assert.equal(result, 45)
   })
-  
+})
+
+describe("age classifier", () => {
+  it("0-3 years old sould be a toddler", () => {
+    const result = getAgeGroup(0)
+
+    assert.equal(result, "toddler")
+  })
+  it("4-12 years old should be a kid")
+  it("13-19 yeras old should be a teenager")
+  it("20-30 years old should be a adult")
+  it("above 39 years old.... you are just old")
+})

@@ -1,5 +1,7 @@
 import assert from "assert"
-import { getAge, getAgeArrow } from "./index.mjs"
+
+// destructing syntax {}
+import { getAge, getAgeArrow, getAgeGroup } from "./index.mjs"
 import { describe, it } from "mocha"
 
 describe("age calculator", () => {
@@ -28,7 +30,12 @@ describe("age classifier", () => {
 
     assert.equal(result, "toddler")
   })
-  it("4-12 years old should be a kid")
+  it("4-12 years old should be a kid", () => {
+    const result = getAgeGroup(5)
+
+    assert.equal(result, "kid")
+  })
+
   it("13-19 yeras old should be a teenager")
   it("20-30 years old should be a adult")
   it("above 39 years old.... you are just old")

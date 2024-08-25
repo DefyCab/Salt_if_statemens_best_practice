@@ -9,6 +9,7 @@ export const getAgeArrow = (birthYear, currentYear) => {
 export const getAgeGroup = (age) => {
   // if condition is met returns the value and then exist the function. Return exist function.
 
+  if (age < 0) return "not possible"
   if (age < 4) return "toddler"
   if (age < 13) return "kid"
   if (age < 20) return "teenager"

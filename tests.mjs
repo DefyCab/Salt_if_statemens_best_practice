@@ -25,6 +25,12 @@ describe("age calculator Love", () => {
 })
 
 describe("age classifier", () => {
+  it("A age less than zero should return not possible", () => {
+    const result = getAgeGroup(-1)
+
+    assert.equal(result, "not possible")
+  })
+
   it("0-3 years old sould be a toddler", () => {
     //
     for (let i = 0; i < 4; i++) {

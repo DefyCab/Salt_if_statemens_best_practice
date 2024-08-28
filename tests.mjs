@@ -1,7 +1,7 @@
 import assert from "assert"
 
 // destructing syntax {}
-import { getAge, getAgeArrow, getAgeGroup } from "./index.mjs"
+import { getAge, getAgeArrow, getAgeGroup, getAgeForPerson } from "./index.mjs"
 import { describe, it } from "mocha"
 import { get } from "http"
 
@@ -89,5 +89,20 @@ describe("age classifier", () => {
     const result = getAgeGroup(121)
 
     assert.equal(result, "not likely")
+  })
+})
+
+describe("get age with objects", () => {
+  it("get age for person", () => {
+    const currentYear = 2024
+    const person = {
+      name: "Love",
+      birthYear: 1979,
+      isTeacher: true,
+    }
+
+    const age = getAgeForPerson(person, currentYear)
+
+    assert.equal(age, 45)
   })
 })

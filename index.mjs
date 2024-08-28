@@ -2,6 +2,10 @@ export function getAge(birthYear, currentYear) {
   return currentYear - birthYear
 }
 
+export function getAgeForPerson(person, currentYear) {
+  return currentYear - person.birthYear
+}
+
 export const getAgeArrow = (birthYear, currentYear) => {
   return currentYear - birthYear
 }

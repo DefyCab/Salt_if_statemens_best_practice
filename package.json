@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests.mjs"
+    "test": "mocha tests.mjs",
+    "test2": "mocha test2.mjs"
   },
   "keywords": [],
   "author": "",

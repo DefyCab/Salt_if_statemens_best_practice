@@ -106,3 +106,53 @@ describe("get age with objects", () => {
     assert.equal(age, 45)
   })
 })
+
+describe("get info from nested objects", () => {
+  it("get perons favourite movie and that movies main actor", () => {
+    const people = {
+      person: [
+        {
+          name: "Love",
+          favouriteMovies: [
+            {
+              name: "Star Wars IV",
+
+              actors: [
+                {
+                  name: "Mark Hamill",
+                  role: "Luke Skywalker",
+                },
+
+                {
+                  name: "Carrie Fischer",
+                  role: "Leia Skywalker",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "Erik",
+          favouriteMovies: [
+            {
+              name: "Breackfast Club",
+
+              actors: [
+                {
+                  name: "Judd Nelson",
+                  role: "Bender",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }
+
+    assert.equal(people.person[1].favouriteMovies[0].actors[0].role, "Bender")
+    assert.equal(
+      people.person[0].favouriteMovies[0].actors[1].name,
+      "Carrie Fischer"
+    )
+  })
+})

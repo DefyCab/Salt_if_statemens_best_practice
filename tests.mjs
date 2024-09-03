@@ -9,6 +9,7 @@ import {
   divide,
 } from "./index.mjs"
 import { describe, it } from "mocha"
+import { error } from "console"
 
 describe("age calculator", () => {
   it("someone born 1972 is 50 in 2022", () => {
@@ -170,12 +171,16 @@ describe("division", () => {
     // assert
     assert.equal(result, 2)
   })
-})
 
-it("4 divided with 0 is ?", () => {
-  // act
-  const result = divide(4, 0)
-
-  // assert
-  assert.equal(result, null)
+  it("4 divided with 0 should throw error", () => {
+    // arrange
+    try {
+      // act
+      const result = divide(4, 0)
+    } catch (err) {
+      // assert
+      // assert.notEqual(err, undefined)
+      assert.equal(err.message, "Divide by zero is not permitted")
+    }
+  })
 })

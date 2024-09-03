@@ -12,7 +12,7 @@ export const getAgeArrow = (birthYear, currentYear) => {
 
 export const divide = (number1, number2) => {
   if (number2 === 0) {
-    throw new Error("Divide by zero is no permitted")
+    throw new Error("Divide by zero is not permitted")
   }
   return number1 / number2
 }

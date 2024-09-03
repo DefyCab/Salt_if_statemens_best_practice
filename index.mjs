@@ -10,6 +10,9 @@ export const getAgeArrow = (birthYear, currentYear) => {
   return currentYear - birthYear
 }
 
+export const divide = (number1, number2) => {
+  return number1 / number2; }
+
 export const getAgeGroup = (age) => {
   // if condition is met returns the value and then exist the function. Return exist function.
 

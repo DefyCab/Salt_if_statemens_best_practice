@@ -1,9 +1,8 @@
 import assert from "assert"
 
 // destructing syntax {}
-import { getAge, getAgeArrow, getAgeGroup, getAgeForPerson } from "./index.mjs"
+import { getAge, getAgeArrow, getAgeGroup, getAgeForPerson, divide } from "./index.mjs"
 import { describe, it } from "mocha"
-import { get } from "http"
 
 describe("age calculator", () => {
   it("someone born 1972 is 50 in 2022", () => {
@@ -156,3 +155,14 @@ describe("get info from nested objects", () => {
     )
   })
 })
+
+describe("division", () => {
+  it("4 divided with 2 is 2", () => {
+    // act
+    const result = divide(4, 2);
+
+    // assert
+    assert.equal(result, 2);
+  });
+});
+

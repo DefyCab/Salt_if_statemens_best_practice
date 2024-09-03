@@ -1,7 +1,13 @@
 import assert from "assert"
 
 // destructing syntax {}
-import { getAge, getAgeArrow, getAgeGroup, getAgeForPerson, divide } from "./index.mjs"
+import {
+  getAge,
+  getAgeArrow,
+  getAgeGroup,
+  getAgeForPerson,
+  divide,
+} from "./index.mjs"
 import { describe, it } from "mocha"
 
 describe("age calculator", () => {
@@ -159,10 +165,17 @@ describe("get info from nested objects", () => {
 describe("division", () => {
   it("4 divided with 2 is 2", () => {
     // act
-    const result = divide(4, 2);
+    const result = divide(4, 2)
 
     // assert
-    assert.equal(result, 2);
-  });
-});
+    assert.equal(result, 2)
+  })
+})
 
+it("4 divided with 0 is ?", () => {
+  // act
+  const result = divide(4, 0)
+
+  // assert
+  assert.equal(result, null)
+})

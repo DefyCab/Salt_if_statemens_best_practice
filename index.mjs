@@ -29,3 +29,24 @@ export const getAgeGroup = (age) => {
   if (age < 121) return "old"
   return "not likely"
 }
+
+// function LogThis(message) {
+//   console.log(message);
+// }
+// LogThis("Logging this message");
+
+// // const logThis2 = function (message) {
+// //   console.log(message);
+// // };
+
+
+// const logThis2 = (message) => {
+//   console.log(message);
+// };
+
+// logThis2("Logging this message too");
+
+// console.log(LogThis)
+// console.log(logThis2)
+// console.log(logThis2.toString())
+// console.log(LogThis.toString())

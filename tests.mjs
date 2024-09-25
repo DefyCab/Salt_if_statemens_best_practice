@@ -199,4 +199,13 @@ describe("callbacks", () => {
     // assert
     assert.equal(result, 90)
   })
+  it("adding with inline logger", () => {
+    // act
+    const result = addWithLog(1, 89, (number) => {
+      console.log(number + 1)
+    })
+
+    // assert
+    assert.equal(result, 90)
+  })
 })

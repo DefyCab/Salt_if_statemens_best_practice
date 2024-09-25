@@ -7,6 +7,7 @@ import {
   getAgeGroup,
   getAgeForPerson,
   divide,
+  addWithLog,
 } from "./index.mjs"
 import { describe, it } from "mocha"
 import { error } from "console"
@@ -182,5 +183,20 @@ describe("division", () => {
       // assert.notEqual(err, undefined)
       assert.equal(err.message, "Divide by zero is not permitted")
     }
+  })
+})
+
+describe("callbacks", () => {
+  it("adding with logger", () => {
+    // arrange
+    const logThis2 = (message) => {
+      console.log(message)
+    }
+
+    // funciton passed as a parameter
+    const result = addWithLog(1, 89, logThis2)
+
+    // assert
+    assert.equal(result, 90)
   })
 })

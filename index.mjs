@@ -33,7 +33,7 @@ export const getAgeGroup = (age) => {
 // function LogThis(message) {
 //   console.log(message);
 // }
-// LogThis("Logging this message");
+// LogThis("Logging this message!");
 
 // // const logThis2 = function (message) {
 // //   console.log(message);
@@ -50,3 +50,9 @@ export const getAgeGroup = (age) => {
 // console.log(logThis2)
 // console.log(logThis2.toString())
 // console.log(LogThis.toString())
+
+export const addWithLog = (number1, number2, logger) => {
+  // logger(`About to ${number1} + ${number2}`)
+  logger(number1)
+  return number1 + number2
+}
